@@ -1,0 +1,25 @@
+def calcular_descuento(precio, descuento):
+    """
+    Calcula el precio con descuento.
+
+    Args:
+        precio (float): El precio original del producto.
+        descuento (float): El porcentaje de descuento a aplicar.
+
+    Returns:
+        float: El precio con descuento.
+    """
+    precio_descuento = precio * (1 - descuento / 100)
+    return precio_descuento
+
+def main():
+    precio_producto = float(input("Ingrese el precio del producto: "))
+
+    porcentaje_descuento = 10  # Porcentaje de descuento del 10%
+    
+    precio_con_descuento = calcular_descuento(precio_producto, porcentaje_descuento)
+
+    print(f"El precio con un descuento del {porcentaje_descuento}% es: {precio_con_descuento}")
+
+if __name__ == "__main__":
+    main()
